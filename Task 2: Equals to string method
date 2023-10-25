@@ -1,0 +1,20 @@
+public class Money {
+    private int dollars;
+    private int cents;
+
+   
+    public boolean equals(Money other) {
+        return this.dollars == other.dollars && this.cents == other.cents;
+    }
+
+    
+    public String toString() {
+        String currency = "$" + dollars + ".";
+        if (cents < 10) {
+            currency += "0"; // Add leading zero for cents < 10
+        }
+        currency += cents;
+        return currency;
+    }
+    
+}
